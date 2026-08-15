@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiziest — Latihan Soal Online</title>
+<meta name="description" content="Platform quiz online untuk siswa SMA. Latihan soal Matematika, Fisika, Biologi, Bahasa Indonesia, dan Bahasa Inggris dengan penilaian otomatis.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#konten-utama">Langsung ke konten utama</a>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">📝 Quiziest<span class="brand-dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="materi.html">Materi &amp; Panduan</a></li>
+      <li><a href="quiz.html">Mulai Quiz</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="konten-utama">
+
+  <header class="hero">
+    <div class="container">
+      <div>
+        <span class="eyebrow">Ujian Latihan Daring</span>
+        <h1>Asah nilai rapormu lewat quiz ala lembar jawaban sungguhan.</h1>
+        <p class="lead">
+          <strong>Quiziest</strong> adalah website latihan soal untuk siswa kelas 10–12.
+          Pilih mata pelajaran, isi bulatan jawaban seperti saat Ujian Sekolah,
+          lalu dapatkan <mark>nilai dan pembahasan otomatis</mark> begitu waktu habis.
+        </p>
+        <div class="btn-row">
+          <a href="quiz.html" class="btn btn-primary">Mulai Quiz Sekarang</a>
+          <a href="materi.html" class="btn btn-outline">Baca Panduan Dulu</a>
+        </div>
+      </div>
+      <div>
+        <img src="assets/hero-lembar-jawaban.svg" alt="Ilustrasi lembar jawaban ujian dengan bulatan A B C D dan pensil 2B">
+      </div>
+    </div>
+  </header>
+
+  <section id="fitur">
+    <div class="container">
+      <h2 class="section-title">Kenapa belajar di sini?</h2>
+      <p class="section-sub">Dirancang supaya latihan soal terasa seperti ujian asli, tapi tetap santai untuk dicoba berkali-kali.</p>
+
+      <ul class="plain-list">
+        <li><strong>Format bulatan (LJK)</strong> — sama seperti lembar jawaban Ujian Sekolah/UTBK, supaya kamu terbiasa.</li>
+        <li><strong>Waktu pengerjaan dibatasi</strong> — melatih kecepatan menjawab dengan hitung mundur di layar.</li>
+        <li><em>Penilaian otomatis</em> — skor dan kunci jawaban langsung muncul setelah submit.</li>
+        <li>Tersedia <u>5 mata pelajaran</u>: Matematika, Fisika, Biologi, Bahasa Indonesia, dan Bahasa Inggris.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="mapel" style="background:var(--white); border-top:1px solid var(--rule-line); border-bottom:1px solid var(--rule-line);">
+    <div class="container">
+      <h2 class="section-title">Pilih Mata Pelajaran</h2>
+      <p class="section-sub">Klik salah satu kartu untuk langsung membuka lembar jawaban quiz-nya.</p>
+
+      <div class="card-grid">
+
+        <article class="subject-card">
+          <img src="assets/topi-wisuda.svg" alt="Ikon topi wisuda">
+          <span class="badge">5 soal · 3 menit</span>
+          <h3>Matematika</h3>
+          <p>Aljabar, geometri dasar, dan fungsi — pemanasan logika sebelum ulangan.</p>
+          <a href="quiz.html?subject=matematika" class="btn btn-primary">Kerjakan Quiz</a>
+        </article>
+
+        <article class="subject-card">
+          <img src="assets/topi-wisuda.svg" alt="Ikon topi wisuda">
+          <span class="badge">5 soal · 3 menit</span>
+          <h3>Fisika</h3>
+          <p>Gaya, kelistrikan, dan gelombang cahaya dalam soal singkat dan padat.</p>
+          <a href="quiz.html?subject=fisika" class="btn btn-primary">Kerjakan Quiz</a>
+        </article>
+
+        <article class="subject-card">
+          <img src="assets/topi-wisuda.svg" alt="Ikon topi wisuda">
+          <span class="badge">5 soal · 3 menit</span>
+          <h3>Biologi</h3>
+          <p>Sel, fotosintesis, hingga sistem peredaran darah manusia.</p>
+          <a href="quiz.html?subject=biologi" class="btn btn-primary">Kerjakan Quiz</a>
+        </article>
+
+        <article class="subject-card">
+          <img src="assets/topi-wisuda.svg" alt="Ikon topi wisuda">
+          <span class="badge">5 soal · 3 menit</span>
+          <h3>Bahasa Indonesia</h3>
+          <p>Kata baku, ide pokok paragraf, dan jenis-jenis teks.</p>
+          <a href="quiz.html?subject=bindo" class="btn btn-primary">Kerjakan Quiz</a>
+        </article>
+
+        <article class="subject-card">
+          <img src="assets/topi-wisuda.svg" alt="Ikon topi wisuda">
+          <span class="badge">5 soal · 3 menit</span>
+          <h3>Bahasa Inggris</h3>
+          <p>Grammar dasar, tenses, dan kosakata sehari-hari.</p>
+          <a href="quiz.html?subject=bing" class="btn btn-primary">Kerjakan Quiz</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="jadwal">
+    <div class="container">
+      <h2 class="section-title">Jadwal Latihan Mingguan</h2>
+      <p class="section-sub">Ikuti jadwal ini agar semua mata pelajaran kebagian latihan setiap minggu. Lihat panduan lengkap di halaman <a href="materi.html">Materi &amp; Panduan</a>.</p>
+
+      <div class="table-wrap">
+        <table class="sheet-table">
+          <caption>Tabel 1 — Rekomendasi jadwal latihan quiz per hari</caption>
+          <thead>
+            <tr>
+              <th scope="col">Hari</th>
+              <th scope="col">Mata Pelajaran</th>
+              <th scope="col">Durasi</th>
+              <th scope="col">Fokus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Senin</td><td>Matematika</td><td>3 menit</td><td>Aljabar &amp; fungsi</td></tr>
+            <tr><td>Selasa</td><td>Fisika</td><td>3 menit</td><td>Gaya &amp; kelistrikan</td></tr>
+            <tr><td>Rabu</td><td>Biologi</td><td>3 menit</td><td>Sel &amp; fotosintesis</td></tr>
+            <tr><td>Kamis</td><td>Bahasa Indonesia</td><td>3 menit</td><td>Struktur teks</td></tr>
+            <tr><td>Jumat</td><td>Bahasa Inggris</td><td>3 menit</td><td>Grammar &amp; kosakata</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Quiziest — Dibuat untuk latihan belajar siswa.</span>
+    <span><a href="kontak.html">Hubungi kami</a> · <a href="materi.html">Panduan pengerjaan</a></span>
+  </div>
+</footer>
+
+<script src="js/quiz-data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulai Quiz — Quiziest</title>
+<meta name="description" content="Kerjakan quiz pilihan ganda ala lembar jawaban ujian, lengkap dengan timer dan penilaian otomatis.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#konten-utama">Langsung ke konten utama</a>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">📝 Quiziest<span class="brand-dot">.</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="materi.html">Materi &amp; Panduan</a></li>
+      <li><a href="quiz.html">Mulai Quiz</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="konten-utama">
+  <section>
+    <div class="container">
+
+      <span class="eyebrow">Lembar Jawaban Digital</span>
+      <h1 id="examTitle" class="section-title">Quiz</h1>
+      <p class="section-sub">
+        Isi bulatan jawaban seperti mengisi LJK. Perhatikan waktu di kanan atas — belum baca aturannya?
+        Lihat halaman <a href="materi.html">Materi &amp; Panduan</a> dulu.
+      </p>
+
+      <div class="form-group" style="max-width:320px; margin-bottom:26px;">
+        <label for="subjectSwitch">Ganti mata pelajaran</label>
+        <select id="subjectSwitch" onchange="window.location.href = 'quiz.html?subject=' + this.value">
+          <option value="matematika">Matematika</option>
+          <option value="fisika">Fisika</option>
+          <option value="biologi">Biologi</option>
+          <option value="bindo">Bahasa Indonesia</option>
+          <option value="bing">Bahasa Inggris</option>
+        </select>
+      </div>
+
+      <div class="exam-sheet">
+        <div class="exam-header">
+          <div>
+            <h2>Lembar Jawaban Ujian</h2>
+            <span class="subject-tag" id="subjectTag">Mata Pelajaran: —</span>
+          </div>
+          <div id="timer">03:00</div>
+        </div>
+
+        <form id="examForm">
+          <div class="exam-body" id="examBody">
+            <div id="questionsContainer"><!-- soal dirender oleh JavaScript --></div>
+          </div>
+
+          <div class="exam-footer" id="examFooter">
+            <div class="progress-wrap">
+              <div class="progress-label" id="progressLabel">Terjawab 0 dari 5 soal (0%)</div>
+              <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Selesai &amp; Lihat Nilai</button>
+          </div>
+        </form>
+
+        <div class="result-panel" id="resultPanel">
+          <div class="result-summary">
+            <div class="stamp" id="stamp">
+              <span class="stamp-label">NILAI</span>
+              <span class="stamp-score" id="stampScore">0</span>
+            </div>
+            <p id="resultText"></p>
+            <div class="btn-row" style="justify-content:center;">
+              <a href="quiz.html" class="btn btn-outline">Ulangi Quiz</a>
+              <a href="index.html#mapel" class="btn btn-primary">Pilih Mapel Lain</a>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="sheet-table" id="resultTable">
+              <caption>Tabel Pembahasan — jawabanmu vs kunci jawaban</caption>
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Pertanyaan</th>
+                  <th scope="col">Jawabanmu</th>
+                  <th scope="col">Kunci</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody><!-- diisi oleh JavaScript --></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Quiziest — Dibuat untuk latihan belajar siswa.</span>
+    <span><a href="kontak.html">Hubungi kami</a> · <a href="materi.html">Panduan pengerjaan</a></span>
+  </div>
+</footer>
+
+<script src="js/quiz-data.js"></script>
+<script src="js/script.js"></script>
+<script>
+  // Sinkronkan dropdown mapel dengan parameter URL saat halaman dimuat
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject") || "matematika";
+    const select = document.getElementById("subjectSwitch");
+    if (select) select.value = subject;
+  })();
+</script>
+</body>
+</html>
